@@ -1,0 +1,37 @@
+1. http is a core Node.js module (no installation required)
+
+2. http.createServer() creates an HTTP server
+
+3. Server callback receives:
+   - req (IncomingMessage)
+   - res (ServerResponse)
+
+4. req object:
+   - req.method → HTTP method
+   - req.url → route
+   - req.headers → request headers
+   - req is a readable stream
+
+5. res object:
+   - res.statusCode → status
+   - res.setHeader() → set headers
+   - res.write() → send data
+   - res.end() → end response
+   - res is a writable stream
+
+6. Routing is manual in http module
+
+7. POST body handling:
+   - req.on("data")
+   - req.on("end")
+
+8. JSON response must be stringified
+
+9. http module is not used directly in production
+   because:
+   - no routing system
+   - no middleware
+   - no body parser
+   - no error handling
+
+10. Express.js is built on top of http module
